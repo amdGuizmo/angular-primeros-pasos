@@ -1,0 +1,16 @@
+<h1>DragonBall Z Main Page</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <app-dbz-list
+    [characterList]="dbzService.characters"
+    (onDelete)="dbzService.deleteCharacterById($event)"></app-dbz-list>
+  </div>
+
+  <div class="col">
+    <app-dbz-add-character
+    (onNewCharacter)="dbzService.onNewCharacter($event)">
+    </app-dbz-add-character>
+  </div>
+</div>
